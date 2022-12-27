@@ -10,12 +10,20 @@ void myinit(){
 
 void dis(){
 	glClear(GL_COLOR_BUFFER_BIT);
-	glTranslatef(50,50,0);
 	glBegin(GL_POLYGON);
+	glColor3f(1,0,0);
 	glVertex2f(50,100);
 	glVertex2f(200,100);
 	glVertex2f(200,300);
 	glVertex2f(50,300);
+	glEnd();
+	
+	glBegin(GL_POLYGON);
+	glColor3f(0,1,0);
+	glVertex2f(50+tx,100+ty);
+	glVertex2f(200+tx,100+ty);
+	glVertex2f(200+tx,300+ty);
+	glVertex2f(50+tx,300+ty);
 	glEnd();
 	glFlush();
 }
